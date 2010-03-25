@@ -1,0 +1,181 @@
+/* style.css */
+
+/* basic elements */
+
+body { 
+	font: times, serif;
+	color: #1240AB; 
+	background: #5CCCCC; 
+	}
+p { 
+	margin-top: 0; 
+	text-align: justify;
+	}
+h1 { 
+    text-align: center;
+	font: bold;
+	}
+h2 { 
+	font: italic normal ; 
+	color: #2A4480;
+	}
+h3 { 
+	font: italic normal;
+	letter-spacing: 1px; 
+	margin-bottom: 0; 
+	color: #06266F;
+	}
+a:link { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #B7A5DF;
+	}
+a:visited { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #D4CDDC;
+	}
+a:hover, a:active { 
+	text-decoration: underline; 
+	color: #9685BA;
+	}
+   
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px dotted #1240AB;
+    }
+    
+.category {
+	border-bottom: 1px #1D7373 dotted;
+	padding: 40px;
+	margin-left: 40px;
+	margin-bottom: 20px;
+	background-color: #eee;
+	width: 50%;
+}
+
+p {
+  margin:5px;
+  font-family:arial;
+  color:#5CCCCC;
+}
+
+
+li {
+	display: inline;
+}
+
+li:after {
+	content:", ";
+}
+li:last-child:after {
+	content:".";
+}
+/*
+aqua:
+009999
+009999
+	
+1D7373
+1D7373
+	
+006363
+006363
+	
+33CCCC
+33CCCC
+	
+5CCCCC
+5CCCCC
+
+blue:
+1240AB
+1240AB
+	
+2A4480
+2A4480
+	
+06266F
+06266F
+	
+4671D5
+4671D5
+	
+6C8CD5
+6C8CD5
+*/
+p {
+	background-color: #006363;
+	line-height: 60px;
+	vertical-align: top;
+}
+
+a:link{
+
+ color: #33CCCC;
+
+}
+
+a:visited{
+
+ color: #5CCCCC;
+
+}
+
+a:hover a:focus{
+
+text-decoration: none;
+
+}
+
+a:active{
+
+ font-weight: bold;
+
+}
+
+a {
+	color: #f00;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+li {
+    color: #ff0000;
+}
+
+.category {
+   color: #0000ff;
+}
+
+#interests {
+   color: #00ff00;
+   	border-bottom: 1px #f00 dotted;
+	padding: 40px;
+	margin-left: 40px;
+	margin-bottom: 20px;
+	background-color: #eee;
+	width: 50%;
+}
+
+#about_me {
+   color: #00ff00;
+   	border-bottom: 1px #f00 dotted;
+	padding: 40px;
+	margin-left: 40px;
+	margin-bottom: 20px;
+	background-color: #eee;
+	width: 50%;
+}
+#personal_info {
+   color: #00ff00;
+   	border-bottom: 1px #f00 dotted;
+	padding: 40px;
+	margin-left: 40px;
+	margin-bottom: 20px;
+	background-color: #eee;
+	width: 50%;
+}

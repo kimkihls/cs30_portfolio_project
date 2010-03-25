@@ -1,0 +1,429 @@
+  [4;36;1mSQL (25.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (135.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (154.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ExampleController#index (for 127.0.0.1 at 2010-03-23 11:08:06) [GET]
+Rendering template within layouts/application
+Rendering example/index
+Completed in 2592ms (View: 2589, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ExampleController#index (for 127.0.0.1 at 2010-03-23 11:08:10) [GET]
+Rendering template within layouts/application
+Rendering example/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing ExampleController#index (for 127.0.0.1 at 2010-03-23 11:29:21) [GET]
+Rendering template within layouts/application
+Rendering example/index
+Completed in 30ms (View: 28, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing ExampleController#index (for 127.0.0.1 at 2010-03-23 11:29:22) [GET]
+Rendering template within layouts/application
+Rendering example/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/]
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20100323183032)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100323183032')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("posts")[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-23 11:32:33) [GET]
+
+ActionController::RoutingError (No route matches "/post" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  c:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  c:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  c:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-23 11:32:41) [GET]
+
+NameError (uninitialized constant PostsController::Post):
+  app/controllers/posts_controller.rb:5:in `index'
+  haml (2.2.16) [v] lib/sass/plugin/rails.rb:19:in `process'
+  compass (0.8.17) [v] lib/compass/app_integration/rails/action_controller.rb:7:in `process_with_compass'
+  <internal:prelude>:8:in `synchronize'
+  c:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  c:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  c:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (75.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-23 11:33:11) [GET]
+
+NameError (uninitialized constant PostsController::Post):
+  app/controllers/posts_controller.rb:5:in `index'
+  haml (2.2.16) [v] lib/sass/plugin/rails.rb:19:in `process'
+  compass (0.8.17) [v] lib/compass/app_integration/rails/action_controller.rb:7:in `process_with_compass'
+  <internal:prelude>:8:in `synchronize'
+  c:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  c:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  c:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (119.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-23 11:33:54) [GET]
+
+NameError (uninitialized constant PostsController::Post):
+  app/controllers/posts_controller.rb:5:in `index'
+  haml (2.2.16) [v] lib/sass/plugin/rails.rb:19:in `process'
+  compass (0.8.17) [v] lib/compass/app_integration/rails/action_controller.rb:7:in `process_with_compass'
+  <internal:prelude>:8:in `synchronize'
+  c:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  c:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  c:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (72.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-23 11:34:27) [GET]
+
+NameError (uninitialized constant PostsController::Post):
+  app/controllers/posts_controller.rb:5:in `index'
+  haml (2.2.16) [v] lib/sass/plugin/rails.rb:19:in `process'
+  compass (0.8.17) [v] lib/compass/app_integration/rails/action_controller.rb:7:in `process_with_compass'
+  <internal:prelude>:8:in `synchronize'
+  c:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  c:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  c:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (74.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-23 11:34:30) [GET]
+
+NameError (uninitialized constant PostsController::Post):
+  app/controllers/posts_controller.rb:5:in `index'
+  haml (2.2.16) [v] lib/sass/plugin/rails.rb:19:in `process'
+  compass (0.8.17) [v] lib/compass/app_integration/rails/action_controller.rb:7:in `process_with_compass'
+  <internal:prelude>:8:in `synchronize'
+  c:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  c:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  c:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (73.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-23 11:35:20) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 195ms (View: 183, DB: 1) | 200 OK [http://127.0.0.1/posts]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2010-03-23 11:42:31) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 2417ms (View: 2405, DB: 0) | 200 OK [http://127.0.0.1/posts/new]
+
+
+Processing ExampleController#index (for 127.0.0.1 at 2010-03-25 04:11:44) [GET]
+Rendering template within layouts/application
+Rendering example/index
+Completed in 2786ms (View: 2785, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-25 10:06:30) [GET]
+
+ActionController::RoutingError (No route matches "/say/hello" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ExampleController#index (for 127.0.0.1 at 2010-03-25 10:06:46) [GET]
+Rendering template within layouts/application
+Rendering example/index
+Completed in 2662ms (View: 2661, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-25 10:17:20) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 259ms (View: 231, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2010-03-25 10:17:36) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 28ms (View: 17, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2010-03-25 10:17:43) [POST]
+  Parameters: {"authenticity_token"=>"nyusg7FrAnx64ASt9q5/LZEOPj7/OkeypEk5laFQjOs=", "post"=>{"title"=>"hi", "body"=>"test"}, "commit"=>"Create"}
+  [4;35;1mPost Create (1.0ms)[0m   [0mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES('hi', 'test', '2010-03-25 17:17:43', '2010-03-25 17:17:43')[0m
+Redirected to http://localhost:3000/posts/1
+Completed in 196ms (DB: 1) | 302 Found [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-03-25 10:17:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 27ms (View: 16, DB: 0) | 200 OK [http://localhost/posts/1]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-25 11:03:05) [GET]
+  Parameters: {"page"=>"work"}
+
+ActionView::MissingTemplate (Missing layout layouts/pages.erb in view path app/views:vendor/gems/clearance-0.8.7/app/views):
+  app/controllers/pages_controller.rb:3:in `index'
+  haml (2.2.16) [v] lib/sass/plugin/rails.rb:19:in `process'
+  compass (0.8.17) [v] lib/compass/app_integration/rails/action_controller.rb:7:in `process_with_compass'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-25 11:03:50) [GET]
+  Parameters: {"page"=>"work"}
+
+ActionView::MissingTemplate (Missing layout layouts/pages.erb in view path app/views:vendor/gems/clearance-0.8.7/app/views):
+  app/controllers/pages_controller.rb:3:in `index'
+  haml (2.2.16) [v] lib/sass/plugin/rails.rb:19:in `process'
+  compass (0.8.17) [v] lib/compass/app_integration/rails/action_controller.rb:7:in `process_with_compass'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-25 11:12:53) [GET]
+  Parameters: {"page"=>"work"}
+
+ActionView::MissingTemplate (Missing layout layouts/pages.erb in view path app/views:vendor/gems/clearance-0.8.7/app/views):
+  app/controllers/pages_controller.rb:3:in `index'
+  haml (2.2.16) [v] lib/sass/plugin/rails.rb:19:in `process'
+  compass (0.8.17) [v] lib/compass/app_integration/rails/action_controller.rb:7:in `process_with_compass'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-25 11:12:55) [GET]
+  Parameters: {"page"=>"work"}
+
+ActionView::MissingTemplate (Missing layout layouts/pages.erb in view path app/views:vendor/gems/clearance-0.8.7/app/views):
+  app/controllers/pages_controller.rb:3:in `index'
+  haml (2.2.16) [v] lib/sass/plugin/rails.rb:19:in `process'
+  compass (0.8.17) [v] lib/compass/app_integration/rails/action_controller.rb:7:in `process_with_compass'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-25 11:12:59) [GET]
+  Parameters: {"page"=>"work"}
+
+ActionView::MissingTemplate (Missing layout layouts/pages.erb in view path app/views:vendor/gems/clearance-0.8.7/app/views):
+  app/controllers/pages_controller.rb:3:in `index'
+  haml (2.2.16) [v] lib/sass/plugin/rails.rb:19:in `process'
+  compass (0.8.17) [v] lib/compass/app_integration/rails/action_controller.rb:7:in `process_with_compass'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-25 11:15:39) [GET]
+  Parameters: {"page"=>"work"}
+Rendering template within layouts/pages
+Rendered pages/_work (1.0ms)
+Completed in 20ms (View: 19, DB: 0) | 200 OK [http://localhost/work]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-25 11:20:39) [GET]
+  Parameters: {"page"=>"work"}
+Rendering template within layouts/pages
+Rendered pages/_work (1.0ms)
+Completed in 12ms (View: 11, DB: 0) | 200 OK [http://localhost/work]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-25 11:20:45) [GET]
+  Parameters: {"page"=>"contacts"}
+Rendering template within layouts/pages
+Rendered pages/_contacts (1.0ms)
+Completed in 11ms (View: 10, DB: 0) | 200 OK [http://localhost/contacts]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-25 11:25:51) [GET]
+  Parameters: {"page"=>"home"}
+Rendering template within layouts/pages
+Rendered pages/_home (1.0ms)
+Completed in 11ms (View: 10, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-25 11:26:18) [GET]
+  Parameters: {"page"=>"home"}
+Rendering template within layouts/pages
+Rendered pages/_home (1.0ms)
+Completed in 13ms (View: 12, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-25 11:26:41) [GET]
+  Parameters: {"page"=>"home"}
+Rendering template within layouts/pages
+Rendered pages/_home (1.0ms)
+Completed in 11ms (View: 10, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-25 11:29:09) [GET]
+  Parameters: {"page"=>"home"}
+Rendering template within layouts/pages
+Rendered pages/_home (2.0ms)
+Completed in 11ms (View: 10, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-25 11:30:14) [GET]
+  Parameters: {"page"=>"home"}
+Rendering template within layouts/pages
+Rendered pages/_home (2.0ms)
+Completed in 12ms (View: 11, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-25 11:32:35) [GET]
+  Parameters: {"page"=>"home"}
+Rendering template within layouts/pages
+Rendered pages/_home (3.0ms)
+Completed in 43ms (View: 11, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-25 11:32:54) [GET]
+  Parameters: {"page"=>"home"}
+Rendering template within layouts/pages
+Rendered pages/_home (3.0ms)
+Completed in 18ms (View: 16, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-25 11:37:23) [GET]
+  Parameters: {"page"=>"home"}
+Rendering template within layouts/pages
+Rendered pages/_home (0.0ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-25 11:41:37) [GET]
+  Parameters: {"page"=>"home"}
+Rendering template within layouts/pages
+Rendered pages/_home (3.0ms)
+Completed in 12ms (View: 11, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-25 11:45:02) [GET]
+  Parameters: {"page"=>"home"}
+Rendering template within layouts/pages
+
+ActionView::TemplateError (Illegal nesting: content can't be both given on the same line as %p and nested within it.) on line #11 of app/views/pages/_home.haml:
+8:   .three.columns
+9:     %h3 About Me
+10:     %p I'm a faculty member at Westmont
+11:       =link_to "<span>See my Work &raquo;", "/work", :class=> "large blue button"
+
+    app/views/pages/_home.haml:11
+    haml (2.2.16) [v] lib/haml/precompiler.rb:740:in `render_tag'
+    haml (2.2.16) [v] lib/haml/precompiler.rb:213:in `process_line'
+    haml (2.2.16) [v] lib/haml/precompiler.rb:177:in `precompile'
+    haml (2.2.16) [v] lib/haml/engine.rb:114:in `initialize'
+    haml (2.2.16) [v] lib/haml/template/plugin.rb:24:in `new'
+    haml (2.2.16) [v] lib/haml/template/plugin.rb:24:in `compile'
+    haml (2.2.16) [v] lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    app/controllers/pages_controller.rb:3:in `index'
+    haml (2.2.16) [v] lib/sass/plugin/rails.rb:19:in `process'
+    compass (0.8.17) [v] lib/compass/app_integration/rails/action_controller.rb:7:in `process_with_compass'
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (106.0ms)
+Rendered rescues/_request_and_response (31.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-25 11:46:33) [GET]
+  Parameters: {"page"=>"contacts"}
+Rendering template within layouts/pages
+Rendered pages/_contacts (0.0ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/contacts]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-25 11:46:49) [GET]
+  Parameters: {"page"=>"home"}
+Rendering template within layouts/pages
+Rendered pages/_home (3.0ms)
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-25 11:47:01) [GET]
+  Parameters: {"page"=>"work"}
+Rendering template within layouts/pages
+Rendered pages/_work (0.0ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/work]
